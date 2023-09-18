@@ -21,7 +21,7 @@ const Chat = () => {
   }, []);
 
   function connectToWs() {
-    const ws = new WebSocket("ws://localhost:4000")
+    const ws = new WebSocket(`ws://${import.meta.env.VITE_BACKEND_URL.split('//')[1]}`);
     setWs(ws);
 
     ws.addEventListener('message', (e) => {

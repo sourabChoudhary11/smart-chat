@@ -21,7 +21,7 @@ const Chat = () => {
   }, [selectedUser]);
 
   function connectToWs() {
-    const ws = new WebSocket(`ws://${import.meta.env.VITE_BACKEND_URL.split('//')[1]}`);
+    const ws = new WebSocket(`wss://${import.meta.env.VITE_BACKEND_URL.split('//')[1]}`);
     setWs(ws);
 
     ws.addEventListener('message', (e) => {

@@ -18,7 +18,7 @@ const Chat = () => {
 
   useEffect(() => {
     connectToWs();
-  }, []);
+  }, [selectedUser]);
 
   function connectToWs() {
     const ws = new WebSocket(`ws://${import.meta.env.VITE_BACKEND_URL.split('//')[1]}`);

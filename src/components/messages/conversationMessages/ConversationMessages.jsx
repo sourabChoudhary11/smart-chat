@@ -5,8 +5,6 @@ const ConversationMessages = React.forwardRef(({ selectedUser, messages }, ref) 
 
   const {id} = useContext(UserContext);
 
-  console.log("messages", messages)
-
   return (
     <>
       {
